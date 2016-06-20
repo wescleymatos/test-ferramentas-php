@@ -3,7 +3,7 @@
 require_once "vendor/autoload.php";
 $container = require_once "bootstrap.php";
 
-use Domain\Services\UserService;
+use App\Domain\Services\UserService;
 
 
 try {

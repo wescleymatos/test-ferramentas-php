@@ -2,7 +2,7 @@
 
 require_once 'vendor/autoload.php';
 
-use Infraestructure\DbContext;
+use App\Infraestructure\DbContext;
 use DI\ContainerBuilder;
 
 $entityManager = new DbContext();

@@ -1,8 +1,8 @@
 <?php
 
-use Domain\Contracts\Repositories\UserRepositoryInterface;
-use Infraestructure\Repositories\UserRepository;
-use Infraestructure\DbContext;
+use App\Domain\Contracts\Repositories\UserRepositoryInterface;
+use App\Infraestructure\Repositories\UserRepository;
+use App\Infraestructure\DbContext;
 
 return [
 	UserRepositoryInterface::class => DI\object(UserRepository::class),
