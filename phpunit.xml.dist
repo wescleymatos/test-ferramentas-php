@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="./tests/bootstrap.php" colors="true">
+<phpunit bootstrap="bootstrap.php" colors="true">
     <testsuites>
-        <testsuite name="">
-            <directory>./tests</directory>
+        <testsuite name="PHPUnit">
+            <directory>tests/App</directory>
         </testsuite>
     </testsuites>
-
     <filter>
         <whitelist>
-            <directory suffix=".php">./src</directory>
+            <directory>src/App</directory>
         </whitelist>
     </filter>
 
     <logging>
-        <log type="coverage-html" target="./build/coverage" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80"/>
-        <log type="testdox-html" target="./build/logs/testdox.html"/>
+        <log type="coverage-html" target="./metrics/coverage" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80"/>
+        <log type="testdox-html" target="./metrics/testdox.html"/>
     </logging>
 </phpunit>

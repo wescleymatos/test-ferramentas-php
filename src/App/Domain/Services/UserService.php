@@ -23,4 +23,9 @@ class UserService implements UserServiceInterface
 
 		$this->userRepository->create($user);
 	}
+
+	public function getFullName()
+	{
+		return 'Nome Sobrenome';
+	}
 }
