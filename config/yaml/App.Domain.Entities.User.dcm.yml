@@ -1,6 +1,6 @@
-Domain\Entities\User:
+App\Domain\Entities\User:
   type: entity
-  repositoryClass: Infraestructure\Repositories\UserRepository
+  repositoryClass: App\Infraestructure\Repositories\UserRepository
   table: users
   id:
     id:
