@@ -12,3 +12,10 @@ App\Domain\Entities\User:
       type: string
     lastName:
       type: string
+  manyToOne:
+    group:
+      targetEntity: App\Domain\Entities\Group
+      inversedBy: users
+      joinColumn:
+        name: group_id
+        referencedColumnName: id

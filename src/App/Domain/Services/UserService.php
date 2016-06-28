@@ -9,23 +9,23 @@ use App\Infraestructure\Repositories\UserRepository;
 
 class UserService implements UserServiceInterface
 {
-	private $userRepository;
-	
-	public function __construct(UserRepositoryInterface $userRepository) 
-	{
-		$this->userRepository = $userRepository;
-	}
+    private $userRepository;
+    
+    public function __construct(UserRepositoryInterface $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
 
-	public function changeName($name, $lastName)
-	{
-		$user = new User($name, $lastName);
-		$user->validate();
+    public function changeName($name, $lastName)
+    {
+        $user = new User($name, $lastName);
+        $user->validate();
 
-		$this->userRepository->create($user);
-	}
+        $this->userRepository->create($user);
+    }
 
-	public function getFullName()
-	{
-		return 'Nome Sobrenome';
-	}
+    public function getFullName()
+    {
+        return 'Nome Sobrenome';
+    }
 }
