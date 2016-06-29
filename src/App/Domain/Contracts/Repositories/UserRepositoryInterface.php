@@ -6,5 +6,5 @@ use App\Domain\Entities\User;
 
 interface UserRepositoryInterface
 {
-	public function create(User $user);
+    public function create(User $user);
 }

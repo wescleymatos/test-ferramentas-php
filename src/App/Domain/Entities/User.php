@@ -7,6 +7,7 @@ class User
     private $id;
     private $name;
     private $lastName;
+    private $group;
 
     public function __construct($name, $lastName)
     {
@@ -48,4 +49,3 @@ class User
         }
     }
 }
-
