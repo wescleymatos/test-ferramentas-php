@@ -15,6 +15,21 @@ class User
         $this->lastName = $lastName;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
     public function setName($name)
     {
         if (empty($name)) {
@@ -22,6 +37,11 @@ class User
         }
 
         $this->name = $name;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
     }
 
     public function setLastName($lastName)

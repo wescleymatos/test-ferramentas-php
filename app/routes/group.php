@@ -22,6 +22,7 @@ $app->get(
         $id = $request->getAttribute('id');
 
         $group = $groupService->getById($id);
+        print_r($group);
 
         $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
         return $response;
@@ -53,7 +54,7 @@ $app->put(
 
         $groupService->edit($data['id'], $data['name']);
 
-        $response->getBody()->write("id: {$data->getId()}, name: {$data->getName()}");
+        $response->getBody()->write("id: {$data['id']}, name: {$data['name']}");
         return $response;
     }
 );

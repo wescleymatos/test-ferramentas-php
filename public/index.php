@@ -17,5 +17,6 @@ $app->get(
 );
 
 require_once '../app/routes/group.php';
+require_once '../app/routes/user.php';
 
 $app->run();
