@@ -10,7 +10,7 @@ class DbContext
     private $isDevMode = true;
     private $conn = array(
                         'driver' => 'pdo_sqlite',
-                        'path' => '/var/www/public/test-doctrine/app/data/db.sqlite',
+                        'path' => '/var/www/public/test-tools/app/data/db.sqlite',
                     );
 
     public function __construct()
@@ -22,7 +22,7 @@ class DbContext
         return EntityManager::create(
             $this->conn,
             Setup::createYAMLMetadataConfiguration(
-                array("/var/www/public/test-doctrine/config/yaml"),
+                array('/var/www/public/test-tools/config/yaml'),
                 $this->isDevMode
             )
         );

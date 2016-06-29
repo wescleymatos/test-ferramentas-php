@@ -1,13 +1,13 @@
 <?php
 
-$container = require_once "../config/bootstrap.php";
+$container = require_once '../config/bootstrap.php';
 
 $app = new \Slim\App;
 
 $app->get(
-    '/', 
+    '/',
     function (
-        Psr\Http\Message\ServerRequestInterface $request, 
+        Psr\Http\Message\ServerRequestInterface $request,
         Psr\Http\Message\ResponseInterface $response
     ) {
         $response->getBody()->write("Hello Mundo");

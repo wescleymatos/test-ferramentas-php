@@ -12,3 +12,9 @@ App\Domain\Entities\User:
       type: string
     lastName:
       type: string
+  oneToOne:
+    group:
+      targetEntity: App\Domain\Entities\Group
+      joinColumn:
+        name: group_id
+        referencedColumnName: id

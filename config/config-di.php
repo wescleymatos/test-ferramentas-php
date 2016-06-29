@@ -8,6 +8,6 @@ use App\Infraestructure\DbContext;
 
 return [
     UserRepositoryInterface::class => DI\object(UserRepository::class),
-	GroupRepositoryInterface::class => DI\object(GroupRepository::class),
-	DbContext::class => DI\object(DbContext::class)
+    GroupRepositoryInterface::class => DI\object(GroupRepository::class),
+    DbContext::class => DI\object(DbContext::class)
 ];

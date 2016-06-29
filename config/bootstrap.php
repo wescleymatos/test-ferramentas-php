@@ -1,5 +1,4 @@
 <?php
-
 require_once '../vendor/autoload.php';
 
 use App\Infraestructure\DbContext;
@@ -9,6 +8,6 @@ $entityManager = new DbContext();
 $context = $entityManager->getContext();
 
 $containerBuilder = new ContainerBuilder();
-$containerBuilder->addDefinitions(__DIR__ . '/config-di.php');
+$containerBuilder->addDefinitions(__DIR__.'/config-di.php');
 $container = $containerBuilder->build();
 return $container;

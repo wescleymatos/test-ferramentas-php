@@ -10,7 +10,7 @@ use App\Domain\Entities\Group;
 class GroupService implements GroupServiceInterface
 {
     private $groupRepository;
-    
+
     public function __construct(GroupRepositoryInterface $groupRepository)
     {
         $this->groupRepository = $groupRepository;
@@ -26,12 +26,18 @@ class GroupService implements GroupServiceInterface
 
     public function edit($id, $name)
     {
-        throw new \BadMethodCallException('Not implemented');
+        $group = $this->getById($id);
+        $group->setName($name);
+        $group->validate();
+
+        $this->groupRepository->update($group);
     }
 
     public function delete($id)
     {
-        throw new \BadMethodCallException('Not implemented');
+        $group = $this->getById($id);
+
+        $this->groupRepository->delete($group);
     }
 
     public function getById($id)
