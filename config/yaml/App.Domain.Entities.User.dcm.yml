@@ -15,6 +15,8 @@ App\Domain\Entities\User:
   oneToOne:
     group:
       targetEntity: App\Domain\Entities\Group
+      mappedBy: group
+      #cascade: ["persist"]
       joinColumn:
         name: group_id
         referencedColumnName: id

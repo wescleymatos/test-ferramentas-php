@@ -3,22 +3,27 @@
 namespace App\Domain\Services;
 
 use App\Domain\Contracts\Services\UserServiceInterface;
+use App\Domain\Contracts\Services\GroupServiceInterface;
 use App\Domain\Contracts\Repositories\UserRepositoryInterface;
-use App\Domain\Entities\User;
 use App\Infraestructure\Repositories\UserRepository;
+use App\Domain\Entities\User;
 
 class UserService implements UserServiceInterface
 {
     private $userRepository;
+    private $groupService;
 
-    public function __construct(UserRepositoryInterface $userRepository)
+    public function __construct(UserRepositoryInterface $userRepository, GroupServiceInterface $groupService)
     {
         $this->userRepository = $userRepository;
+        $this->groupService = $groupService;
     }
 
-    public function add($name, $lastName)
+    public function add($name, $lastName, $idGroup)
     {
-        $user = new User($name, $lastName);
+        $group = $this->groupService->getById($idGroup);
+
+        $user = new User($group, $name, $lastName);
         $user->validate();
 
         $this->userRepository->create($user);

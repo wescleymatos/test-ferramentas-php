@@ -36,7 +36,7 @@ $app->post(
     ) use ($userService) {
         try {
         $data = $request->getParsedBody();
-        $userService->add($data['name'], $data['last']);
+        $userService->add($data['name'], $data['last'], $data['idGroup']);
         $response->getBody()->write("name: {$data['name']}, last: {$data['last']}");
 
         } catch (Exception $e) {

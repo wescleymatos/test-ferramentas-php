@@ -9,10 +9,11 @@ class User
     private $lastName;
     private $group;
 
-    public function __construct($name, $lastName)
+    public function __construct($group, $name, $lastName)
     {
         $this->name = $name;
         $this->lastName = $lastName;
+        $this->group = $group;
     }
 
     public function getId()
@@ -60,6 +61,10 @@ class User
 
     public function validate()
     {
+        if (empty($this->group)) {
+            throw new \Exception('The group is not valid.');
+        }
+
         if (empty($this->name)) {
             throw new \Exception('The name is not valid.');
         }
