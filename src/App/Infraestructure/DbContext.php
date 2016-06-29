@@ -2,29 +2,21 @@
 
 namespace App\Infraestructure;
 
-use Doctrine\ORM\Tools\Setup;
-use Doctrine\ORM\EntityManager;
+use \PDO;
 
 class DbContext
 {
-    private $isDevMode = true;
-    private $conn = array(
-                        'driver' => 'pdo_sqlite',
-                        'path' => '/var/www/public/test-tools/app/data/db.sqlite',
-                    );
+    private $stringConnection = 'sqlite:/home/datacom/Documents/Dev/php-tools/app/data/db.sqlite';
+    private $pdo;
 
-    public function __construct()
+    public function __construct(PDO $pdo)
     {
+        $this->pdo = $pdo;
     }
 
     public function getContext()
     {
-        return EntityManager::create(
-            $this->conn,
-            Setup::createYAMLMetadataConfiguration(
-                array('/var/www/public/test-tools/config/yaml'),
-                $this->isDevMode
-            )
-        );
+        $file_db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        return $this->
     }
 }
