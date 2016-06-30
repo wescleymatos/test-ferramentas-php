@@ -2,36 +2,34 @@
 
 namespace App\Domain\Entities;
 
-use Doctrine\Common\Collections\ArrayCollection;
-
 class Group
 {
     private $id;
     private $name;
-    private $users;
+    //protected $users;
 
-    public function __construct($name)
+    public function __construct($name = null)
     {
         $this->name = $name;
-        $this->users = new ArrayCollection();
+        //$this->users = new ArrayCollection();
     }
 
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
 
-    public function setId($id)
+    public function setId(int $id)
     {
         $this->id = $id;
     }
 
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function setName($name)
+    public function setName(string $name)
     {
         if (empty($name)) {
             throw new \Exception('The name is not valid.');

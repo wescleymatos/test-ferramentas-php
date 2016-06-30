@@ -19,7 +19,7 @@ class UserService implements UserServiceInterface
         $this->groupService = $groupService;
     }
 
-    public function add($name, $lastName, $idGroup)
+    public function add(string $name, string $lastName, int $idGroup)
     {
         $group = $this->groupService->getById($idGroup);
 
@@ -29,7 +29,7 @@ class UserService implements UserServiceInterface
         $this->userRepository->create($user);
     }
 
-    public function edit($id, $name, $lastName)
+    public function edit(int $id, string $name, string $lastName, int $idGroup)
     {
         $user = $this->getById($id);
         $user->setName($name);
@@ -39,14 +39,14 @@ class UserService implements UserServiceInterface
         $this->userRepository->update($user);
     }
 
-    public function delete($id)
+    public function delete(int $id)
     {
         $user = $this->getById($id);
 
         $this->userRepository->delete($user);
     }
 
-    public function getById($id)
+    public function getById(int $id): User
     {
         $user = $this->userRepository->get($id);
         if (empty($user)) {

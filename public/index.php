@@ -2,16 +2,19 @@
 
 $container = require_once '../config/bootstrap.php';
 
-$app = new \Slim\App;
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
 
-$app->get(
-    '/',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) {
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+$c = new \Slim\Container($configuration);
+$app = new \Slim\App($c);
+
+$app->get('/', function (Request $request, Response $response) {
         $response->getBody()->write("Hello Mundo");
-
         return $response;
     }
 );

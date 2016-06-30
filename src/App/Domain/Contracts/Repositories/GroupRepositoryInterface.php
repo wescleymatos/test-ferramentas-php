@@ -6,8 +6,8 @@ use App\Domain\Entities\Group;
 
 interface GroupRepositoryInterface
 {
-    public function create(Group $group);
+    public function create(Group $group): int;
     public function update(Group $group);
     public function delete(Group $group);
-    public function get($id);
+    public function get(int $id): Group;
 }

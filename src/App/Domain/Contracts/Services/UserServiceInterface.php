@@ -2,10 +2,12 @@
 
 namespace App\Domain\Contracts\Services;
 
+use App\Domain\Entities\User;
+
 interface UserServiceInterface
 {
-    public function add($name, $lastName, $idGroup);
-    public function edit($id, $name, $lastName);
-    public function delete($id);
-    public function getById($id);
+    public function add(string $name, string $lastName, int $idGroup);
+    public function edit(int $id, string $name, string $lastName, int $idGroup);
+    public function delete(int $id);
+    public function getById(int $id): User;
 }

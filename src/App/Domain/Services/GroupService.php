@@ -16,7 +16,7 @@ class GroupService implements GroupServiceInterface
         $this->groupRepository = $groupRepository;
     }
 
-    public function add($name)
+    public function add(string $name)
     {
         $group = new Group($name);
         $group->validate();
@@ -24,7 +24,7 @@ class GroupService implements GroupServiceInterface
         $this->groupRepository->create($group);
     }
 
-    public function edit($id, $name)
+    public function edit(int $id, string $name)
     {
         $group = $this->getById($id);
         $group->setName($name);
@@ -33,14 +33,14 @@ class GroupService implements GroupServiceInterface
         $this->groupRepository->update($group);
     }
 
-    public function delete($id)
+    public function delete(int $id)
     {
         $group = $this->getById($id);
 
         $this->groupRepository->delete($group);
     }
 
-    public function getById($id)
+    public function getById(int $id): Group
     {
         $group = $this->groupRepository->get($id);
         if (empty($group)) {
