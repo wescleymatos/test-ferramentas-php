@@ -1,7 +1,7 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use App\Infraestructure\DbContext;
+use Auth\Infraestructure\DbContext;
 use DI\ContainerBuilder;
 
 $entityManager = new DbContext();

@@ -20,6 +20,10 @@ class Group
 
     public function setId(int $id)
     {
+        if (empty($id)) {
+            throw new \InvalidArgumentException('The id is not valid.');
+        }
+
         $this->id = $id;
     }
 
@@ -31,7 +35,7 @@ class Group
     public function setName(string $name)
     {
         if (empty($name)) {
-            throw new \Exception('The name is not valid.');
+            throw new \InvalidArgumentException('The name is not valid.');
         }
 
         $this->name = $name;
@@ -40,7 +44,7 @@ class Group
     public function validate()
     {
         if (empty($this->name)) {
-            throw new \Exception('The name is not valid.');
+            throw new \InvalidArgumentException('The name is not valid.');
         }
     }
 }

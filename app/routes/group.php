@@ -3,7 +3,7 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-$groupService = $container->get('App\Domain\Services\GroupService');
+$groupService = $container->get('Auth\Domain\Services\GroupService');
 
 $app->get('/groups[/]', function (Request $request, Response $response) {
     try {

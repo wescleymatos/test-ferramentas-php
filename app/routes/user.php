@@ -1,6 +1,6 @@
 <?php
 
-$userService = $container->get('App\Domain\Services\UserService');
+$userService = $container->get('Auth\Domain\Services\UserService');
 
 $app->get(
     '/users[/]',

@@ -1,6 +1,7 @@
 <?php
+declare(strict_types=1);
 
-$container = require_once '../config/bootstrap.php';
+$container = require_once '../app/bootstrap.php';
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
