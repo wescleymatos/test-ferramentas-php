@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Contracts\Repositories;
+namespace Auth\Domain\Contracts\Repositories;
 
-use App\Domain\Entities\Group;
+use Auth\Domain\Entities\Group;
 
 interface GroupRepositoryInterface
 {

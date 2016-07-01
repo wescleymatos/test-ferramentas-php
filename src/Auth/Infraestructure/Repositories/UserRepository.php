@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Infraestructure\Repositories;
+namespace Auth\Infraestructure\Repositories;
 
-use App\Domain\Contracts\Repositories\UserRepositoryInterface;
-use App\Domain\Entities\User;
-use App\Infraestructure\DbContext;
+use Auth\Domain\Contracts\Repositories\UserRepositoryInterface;
+use Auth\Domain\Entities\User;
+use Auth\Infraestructure\DbContext;
 
 class UserRepository implements UserRepositoryInterface
 {

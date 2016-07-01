@@ -1,17 +1,16 @@
 <?php
 
-namespace App\Domain\Entities;
+namespace Auth\Domain\Entities;
 
 class Group
 {
     private $id;
     private $name;
-    //protected $users;
+    private $users = array();
 
-    public function __construct($name = null)
+    public function __construct($name)
     {
         $this->name = $name;
-        //$this->users = new ArrayCollection();
     }
 
     public function getId(): int

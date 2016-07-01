@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Infraestructure\Repositories;
+namespace Auth\Infraestructure\Repositories;
 
-use App\Domain\Contracts\Repositories\GroupRepositoryInterface;
-use App\Domain\Entities\Group;
-use App\Infraestructure\DbContext;
+use Auth\Domain\Contracts\Repositories\GroupRepositoryInterface;
+use Auth\Domain\Entities\Group;
+use Auth\Infraestructure\DbContext;
 
 class GroupRepository implements GroupRepositoryInterface
 {
@@ -57,7 +57,7 @@ class GroupRepository implements GroupRepositoryInterface
             throw new \RuntimeException('Fail to select group data');
         }
 
-        $stm->setFetchMode(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE, 'App\Domain\Entities\Group');
+        $stm->setFetchMode(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE, 'Auth\Domain\Entities\Group');
         return $stm->fetch();
     }
 }

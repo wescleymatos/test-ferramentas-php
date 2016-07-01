@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Services;
+namespace Auth\Domain\Services;
 
-use App\Domain\Entities\User;
+use Auth\Domain\Entities\User;
 use DI\ContainerBuilder;
 use PHPUnit_Framework_TestCase;
 
@@ -23,7 +23,7 @@ class UserServiceTest extends PHPUnit_Framework_TestCase
         $this->user = new User('Nome', 'Sobrenome');
         $this->userService = $this->container->get('App\Domain\Services\UserService');
     }
-    
+
     public function testGetFullName()
     {
         $expected = 'Nome Sobrenome';

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Domain\Contracts\Services;
+namespace Auth\Domain\Contracts\Services;
 
-use App\Domain\Entities\User;
+use Auth\Domain\Entities\User;
 
 interface UserServiceInterface
 {

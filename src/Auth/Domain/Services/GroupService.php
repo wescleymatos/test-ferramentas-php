@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Domain\Services;
+namespace Auth\Domain\Services;
 
-use App\Domain\Contracts\Services\GroupServiceInterface;
-use App\Domain\Contracts\Repositories\GroupRepositoryInterface;
-use App\Infraestructure\Repositories\GroupRepository;
-use App\Domain\Entities\Group;
+use Auth\Domain\Contracts\Services\GroupServiceInterface;
+use Auth\Domain\Contracts\Repositories\GroupRepositoryInterface;
+use Auth\Infraestructure\Repositories\GroupRepository;
+use Auth\Domain\Entities\Group;
 
 class GroupService implements GroupServiceInterface
 {

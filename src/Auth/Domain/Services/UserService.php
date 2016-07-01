@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Domain\Services;
+namespace Auth\Domain\Services;
 
-use App\Domain\Contracts\Services\UserServiceInterface;
-use App\Domain\Contracts\Services\GroupServiceInterface;
-use App\Domain\Contracts\Repositories\UserRepositoryInterface;
-use App\Infraestructure\Repositories\UserRepository;
-use App\Domain\Entities\User;
+use Auth\Domain\Contracts\Services\UserServiceInterface;
+use Auth\Domain\Contracts\Services\GroupServiceInterface;
+use Auth\Domain\Contracts\Repositories\UserRepositoryInterface;
+use Auth\Infraestructure\Repositories\UserRepository;
+use Auth\Domain\Entities\User;
 
 class UserService implements UserServiceInterface
 {
