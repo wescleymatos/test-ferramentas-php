@@ -1,64 +1,43 @@
 <?php
 
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
+
 $userService = $container->get('Auth\Domain\Services\UserService');
 
-$app->get(
-    '/users[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) {
-        $response->getBody()->write("Hello usuario");
-        return $response;
-    }
-);
+$app->get('/users[/]', function (Request $request, Response $response) {
+    $response->getBody()->write("Hello usuario");
+    return $response;
+});
 
-$app->get(
-    '/users/{id}',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($userService) {
-        $id = $request->getAttribute('id');
+$app->get('/users/{id}', function (Request $request, Response $response) use ($userService) {
+    $id = $request->getAttribute('id');
 
-        $user = $userService->getById($id);
+    $user = $userService->getById($id);
 
-        $response->getBody()->write("id: {$user->getId()}, name: {$user->getName()}");
-        return $response;
-    }
-);
+    $response->getBody()->write("id: {$user->getId()}, name: {$user->getName()}");
+    return $response;
+});
 
-$app->post(
-    '/users[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($userService) {
-        try {
+$app->post('/users[/]', function (Request $request, Response $response) use ($userService) {
+    try {
         $data = $request->getParsedBody();
         $userService->add($data['name'], $data['last'], $data['idGroup']);
         $response->getBody()->write("name: {$data['name']}, last: {$data['last']}");
 
-        } catch (Exception $e) {
-            $response->getBody()->write($e->getMessage());
-        }
-
-
-        return $response;
+    } catch (Exception $e) {
+        $response->getBody()->write($e->getMessage());
     }
-);
 
-$app->put(
-    '/users[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($userService) {
-        $data = $request->getParsedBody();
 
-        $userService->edit($data['id'], $data['name'], $data['last']);
+    return $response;
+});
 
-        $response->getBody()->write("id: {$data['id']}, name: {$data['name']}");
-        return $response;
-    }
-);
+$app->put('/users[/]', function (Request $request, Response $response) use ($userService) {
+    $data = $request->getParsedBody();
+
+    $userService->edit($data['id'], $data['name'], $data['last']);
+
+    $response->getBody()->write("id: {$data['id']}, name: {$data['name']}");
+    return $response;
+});
