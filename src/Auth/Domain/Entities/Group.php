@@ -2,6 +2,8 @@
 
 namespace Auth\Domain\Entities;
 
+use Auth\Resource\Validation\AssertionConcern;
+
 class Group
 {
     private $id;
@@ -20,9 +22,7 @@ class Group
 
     public function setId(int $id)
     {
-        if (empty($id)) {
-            throw new \InvalidArgumentException('The id is not valid.');
-        }
+        AssertionConcern::assertArgumentNotEmpty($id, 'The id is not valid.');
 
         $this->id = $id;
     }
@@ -34,17 +34,13 @@ class Group
 
     public function setName(string $name)
     {
-        if (empty($name)) {
-            throw new \InvalidArgumentException('The name is not valid.');
-        }
+        AssertionConcern::assertArgumentNotEmpty($name, 'The name is not valid.');
 
         $this->name = $name;
     }
 
     public function validate()
     {
-        if (empty($this->name)) {
-            throw new \InvalidArgumentException('The name is not valid.');
-        }
+        AssertionConcern::assertArgumentNotEmpty($name, 'The name is not valid.');
     }
 }
