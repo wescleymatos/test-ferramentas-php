@@ -10,7 +10,7 @@ class Group
     private $name;
     private $users = array();
 
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }
@@ -41,6 +41,6 @@ class Group
 
     public function validate()
     {
-        AssertionConcern::assertArgumentNotEmpty($name, 'The name is not valid.');
+        AssertionConcern::assertArgumentNotEmpty($this->name, 'The name is not valid.');
     }
 }

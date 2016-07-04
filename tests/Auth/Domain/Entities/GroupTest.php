@@ -9,20 +9,11 @@ class GroupTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $this->group = new Group('admin');
-
-        set_error_handler(array($this, 'errorHandler'));
-    }
-
-    public function errorHandler($errno, $errstr, $errfile, $errline)
-    {
-        throw new \InvalidArgumentException(
-            sprintf('Missing argument. %s %s %s %s', $errno, $errstr, $errfile, $errline)
-        );
     }
 
     public function testThrowExceptionWhenInstanceNotPassParamsConstruct()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->setExpectedException('TypeError');
         new Group;
     }
 
@@ -61,7 +52,7 @@ class GroupTest extends \PHPUnit_Framework_TestCase
         $this->group->setName('');
     }
 
-    public function testThrowExceptionWhenObjectNotValidation()
+    public function testValidateThrowExceptionWhenObjectNotPassParam()
     {
         $this->setExpectedException('InvalidArgumentException');
 
