@@ -1,0 +1,15 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+    "phpcompanion": {
+        "namespace_prefix": "",
+        "exclude_dir": [
+            "vendor",
+            "build"
+        ]
+    }
+}
