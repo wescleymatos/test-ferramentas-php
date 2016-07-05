@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"as",
+				"assertIsValid"
+			],
+			[
 				"ret",
 				"return"
 			],
@@ -239,30 +243,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/Auth/Domain/Entities/User.php",
-			"settings":
-			{
-				"buffer_size": 2253,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "tests/Auth/Domain/Entities/UserTest.php",
-			"settings":
-			{
-				"buffer_size": 2787,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/routes/group.php",
-			"settings":
-			{
-				"buffer_size": 1886,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -333,13 +313,19 @@
 	],
 	"file_history":
 	[
+		"/home/datacom/Documents/Dev/php-tools/app/bootstrap.php",
+		"/home/datacom/Documents/Dev/php-tools/public/index.php",
+		"/home/datacom/Documents/Dev/php-tools/app/config-di.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/User.php",
+		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/UserTest.php",
+		"/home/datacom/Documents/Dev/php-tools/phpunit.xml.dist",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities/CpfVerify.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/CpfAssertionConcern.php",
+		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
 		"/home/datacom/Documents/Dev/php-tools/project.sublime-project",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/PasswordAssertionConcern.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/AssertionConcern.php",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/CpfAssertionConcern.php",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities/CpfVerify.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/Group.php",
-		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Infraestructure/DbContext.php",
 		"/home/datacom/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/home/datacom/Documents/Dev/php-tools/vendor/slim/slim/Slim/Http/Request.php",
@@ -347,15 +333,12 @@
 		"/home/datacom/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Services/UserService.php",
 		"/home/datacom/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/User.php",
-		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/UserTest.php",
 		"/home/datacom/Documents/Dev/php-tools/project.sublime-workspace",
 		"/home/datacom/.config/sublime-text-3/Packages/PHP Companion/PHP Companion.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/datacom/Documents/Dev/php-tools/README.md",
-		"/home/datacom/Documents/Dev/php-tools/phpunit.xml.dist",
 		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/GroupTest.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/functions/functions.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/AcompanhamentoController.php",
@@ -363,7 +346,6 @@
 		"/home/datacom/Documents/Dev/read-xml/index.php",
 		"/home/datacom/Documents/Dev/read-xml/messages.xml",
 		"/home/datacom/Documents/Dev/php-tools/composer.json",
-		"/home/datacom/Documents/Dev/php-tools/public/index.php",
 		"/home/datacom/Documents/Dev/php-tools/app/routes/user.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Services/GroupService.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Infraestructure/Repositories/GroupRepository.php",
@@ -458,9 +440,7 @@
 		"/home/datacom/MEGA/Temp/Preferences.sublime-settings",
 		"/home/datacom/Vagrant/Datacom/public/draw-chart/package.json",
 		"/home/datacom/Vagrant/Datacom/public/draw-chart/bower.json",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/.gitignore",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/tests/config.php",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/tests/App/Domain/Services/UserServiceTest.php"
+		"/home/datacom/Vagrant/Datacom/public/test-doctrine/.gitignore"
 	],
 	"find":
 	{
@@ -558,118 +538,6 @@
 	"groups":
 	[
 		{
-			"selected": 2,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "src/Auth/Domain/Entities/User.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2253,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								454,
-								454
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "tests/Auth/Domain/Entities/UserTest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2787,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2766,
-								2766
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"spell_check": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1656.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/routes/group.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1886,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1813,
-								1813
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 897.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
 			"sheets":
 			[
 			]
@@ -690,32 +558,18 @@
 			[
 				0,
 				0,
-				2,
+				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
-			],
-			[
-				1,
-				1,
-				2,
-				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.823055162659,
 			1.0
 		]
 	},
@@ -750,6 +604,22 @@
 		"selected_items":
 		[
 			[
+				"confi",
+				"app/config-di.php"
+			],
+			[
+				"boot",
+				"app/bootstrap.php"
+			],
+			[
+				"inde",
+				"public/index.php"
+			],
+			[
+				"php",
+				"phpunit.xml.dist"
+			],
+			[
 				"grou",
 				"app/routes/group.php"
 			],
@@ -780,10 +650,6 @@
 			[
 				"rea",
 				"README.md"
-			],
-			[
-				"php",
-				"phpunit.xml.dist"
 			],
 			[
 				"readme",
@@ -1091,7 +957,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":

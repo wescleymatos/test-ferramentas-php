@@ -1,6 +1,6 @@
 <?php
 
-$container = require_once '../app/bootstrap.php';
+$container = require '../app/bootstrap.php';
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -19,7 +19,7 @@ $app->get('/', function (Request $request, Response $response) {
     }
 );
 
-require_once '../app/routes/group.php';
-require_once '../app/routes/user.php';
+require '../app/routes/group.php';
+require '../app/routes/user.php';
 
 $app->run();
