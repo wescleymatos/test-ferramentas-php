@@ -3,6 +3,7 @@
 namespace Auth\Domain\Entities;
 
 use Auth\Resource\Validation\AssertionConcern;
+use Auth\Resource\Validation\CpfAssertionConcern;
 use Auth\Resource\Validation\PasswordAssertionConcern;
 
 class User
@@ -68,11 +69,23 @@ class User
         return $password;
     }
 
+    public function getCpf(): string
+    {
+        return $this->cpf;
+    }
+
+    public function setCpf(string $cpf)
+    {
+        CpfAssertionConcern::assertIsValid($cpf);
+
+        $this->cpf = $cpf;
+    }
+
     public function validate()
     {
         AssertionConcern::assertArgumentNotEmpty($this->name, 'The name is not valid.');
         AssertionConcern::assertArgumentIsAnEmailAddress($this->email, 'The email is not valid.');
-        AssertionConcern::assertArgumentNotEmpty($this->cpf, 'The cpf is not valid.');
+        CpfAssertionConcern::assertIsValid($this->cpf);
         PasswordAssertionConcern::assertIsValid($this->password);
         AssertionConcern::assertArgumentNotEmpty($this->group, 'The group is not valid.');
     }

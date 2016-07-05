@@ -19,7 +19,6 @@ $app->get('/groups/{id}', function (Request $request, Response $response) use ($
         $id = $request->getAttribute('id');
 
         $group = $groupService->getById($id);
-        print_r($group);
 
         $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
         return $response;

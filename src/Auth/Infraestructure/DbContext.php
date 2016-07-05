@@ -6,7 +6,7 @@ use \PDO;
 
 class DbContext
 {
-    private $stringConnection = 'sqlite:/home/wescleymatos/Documents/Dev/test-tools/app/data/db.sqlite';
+    private $stringConnection = 'sqlite:/home/datacom/Documents/Dev/php-tools/app/data/db.sqlite';
     private $pdo;
 
     public function __construct()

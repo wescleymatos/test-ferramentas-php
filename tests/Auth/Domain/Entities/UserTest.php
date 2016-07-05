@@ -57,7 +57,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->user->getPassword();
     }
 
-    public function testSetPasswordAfterSet()
+    public function testGetPasswordAfterSet()
     {
         $this->user->setPassword('123456', '123456');
         $return = $this->user->getPassword();
@@ -93,5 +93,93 @@ class UserTest extends \PHPUnit_Framework_TestCase
     {
         $return = $this->user->resetPassword();
         $this->assertNotEmpty($return);
+    }
+
+    public function testGetCpfToConstructGiven()
+    {
+        $return = $this->user->getCpf();
+
+        $this->assertEquals('97062018660', $return);
+    }
+
+    public function testGetCpfAfterSet()
+    {
+        $this->user->setCpf('25125507458');
+        $return = $this->user->getCpf();
+
+        $this->assertEquals('25125507458', $return);
+    }
+
+    public function testThrowExceptionWhenHasTheSameNumber()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'CPF is not valid.');
+
+        $this->user->setCpf('11111111111');
+    }
+
+    public function testThrowExceptionWhenPassTenNumbers()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'CPF is not valid.');
+
+        $this->user->setCpf('9706201866');
+    }
+
+    public function testValidateThrowExceptionWhenNameIsEmpty()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'The name is not valid.');
+
+        $group = new Group('admin');
+        $user = new User('', 'teste@teste.com', '97062018660', $this->group);
+
+        $user->validate();
+    }
+
+    public function testValidateThrowExceptionWhenEmailIsNotValid()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'The email is not valid.');
+
+        $group = new Group('admin');
+        $user = new User('wescley', 'teste@teste', '97062018660', $this->group);
+
+        $user->validate();
+    }
+
+    public function testValidateThrowExceptionWhenEmailIsEmpty()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'The email is not valid.');
+
+        $group = new Group('admin');
+        $user = new User('wescley', '', '97062018660', $this->group);
+
+        $user->validate();
+    }
+
+    public function testValidateThrowExceptionWhenCpfIsNotValid()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'CPF is not valid.');
+
+        $group = new Group('admin');
+        $user = new User('wescley', 'teste@teste.com', '9706201866', $this->group);
+
+        $user->validate();
+    }
+
+    public function testValidateThrowExceptionWhenCpfIsEmpty()
+    {
+        $this->setExpectedException('InvalidArgumentException', 'CPF can not be null.');
+
+        $group = new Group('admin');
+        $user = new User('wescley', 'teste@teste.com', '', $this->group);
+
+        $user->validate();
+    }
+
+    public function testValidateThrowExceptionWhenGroupIsEmpty()
+    {
+        $this->setExpectedException('TypeError');
+
+        $user = new User('wescley', 'teste@teste.com', '97062018660', '');
+
+        $user->validate();
     }
 }

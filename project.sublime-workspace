@@ -240,22 +240,6 @@
 	"buffers":
 	[
 		{
-			"file": "src/Auth/Resource/Validation/PasswordAssertionConcern.php",
-			"settings":
-			{
-				"buffer_size": 505,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/Auth/Resource/Validation/AssertionConcern.php",
-			"settings":
-			{
-				"buffer_size": 2760,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "src/Auth/Domain/Entities/User.php",
 			"settings":
 			{
@@ -264,34 +248,18 @@
 			}
 		},
 		{
-			"contents": "",
-			"file": "/home/datacom/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "tests/Auth/Domain/Entities/UserTest.php",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 2787,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "{\n	// A list of URLs that each contain a JSON file with a list of repositories.\n	// The repositories from these channels are placed in order after the\n	// repositories from the \"repositories\" setting\n	\"channels\": [\n		\"https://packagecontrol.io/channel_v3.json\"\n	],\n\n	// A list of URLs that contain a packages JSON file. These repositories\n	// are placed in order before repositories from the \"channels\"\n	// setting\n	\"repositories\": [],\n\n	// A list of packages to install pre-release versions for. Versions\n	// under 1.0.0 are not considered pre-release, only those using the SemVer\n	// -prerelease suffixes will be ignored if the package is not in this\n	// list.\n	\"install_prereleases\": [],\n\n	// If debugging information for HTTP/HTTPS connections should be printed\n	// to the Sublime Text console\n	\"debug\": false,\n\n	// This helps solve naming issues where a repository it not named the\n	// same as the package should be. This is primarily only useful for\n	// GitHub and BitBucket repositories. This mapping will override the\n	// mapping that is retrieved from the repository channels.\n	\"package_name_map\": {},\n\n	// If package install, upgrade and removal info should be submitted to\n	// the channel for aggregated statistics\n	\"submit_usage\": true,\n\n	// The URL to post install, upgrade and removal notices to\n	\"submit_url\": \"https://packagecontrol.io/submit\",\n\n	// If packages should be automatically upgraded when ST starts\n	\"auto_upgrade\": true,\n\n	// If missing packages should be automatically installed when ST starts\n	\"install_missing\": true,\n\n	// If a package was installed by Package Control (has a\n	// package-metadata.json file) but is not in installed_packages, remove it\n	// based upon the assumption that it was removed on another machine and\n	// the Package Control.sublime-settings file was synced to this machine.\n	\"remove_orphaned\": true,\n\n	// The minimum frequency in hours in which to check for automatic upgrades,\n	// setting this to 0 will always check for automatic upgrades\n	\"auto_upgrade_frequency\": 1,\n\n	// Packages to not auto upgrade\n	\"auto_upgrade_ignore\": [],\n\n	// Timeout for downloading channels, repositories and packages. Doesn't\n	// have an effect on Windows due to a bug in WinINet.\n	\"timeout\": 30,\n\n	// The number of seconds to cache repository and package info for\n	\"cache_length\": 300,\n\n	// An HTTP proxy server to use for requests. Not normally used on Windows\n	// since the system proxy configuration is utilized via WinINet. However,\n	// if WinINet is not working properly, this will be used by the Urllib\n	// downloader, which acts as a fallback.\n	\"http_proxy\": \"\",\n	// An HTTPS proxy server to use for requests - this will inherit from\n	// http_proxy if it is set to \"\" or null and http_proxy has a value. You\n	// can set this to false to prevent inheriting from http_proxy. Not\n	// normally used on Windows since the system proxy configuration is\n	// utilized via WinINet. However, if WinINet is not working properly, this\n	// will be used by the Urllib downloader, which acts as a fallback.\n	\"https_proxy\": \"\",\n\n	// Username and password for both http_proxy and https_proxy. May be used\n	// with WinINet to set credentials for system-level proxy config.\n	\"proxy_username\": \"\",\n	\"proxy_password\": \"\",\n\n	// If HTTP responses should be cached to disk\n	\"http_cache\": true,\n\n	// Number of seconds to cache HTTP responses for, defaults to one week\n	\"http_cache_length\": 604800,\n\n	// User agent for HTTP requests. If \"%s\" is present, will be replaced\n	// with the current version.\n	\"user_agent\": \"Package Control v%s\",\n\n	// A list of package names to ignore when performing operations. This will\n	// only affect packages that appear to be a git or hg repository, but will\n	// be especially useful for package developers who manually deal with the\n	// repository and don't want Package Control touching it.\n	//\n	// It can help if trying to list packages to install hangs, possibly due\n	// to an interactive prompt.\n	//\n	// The setting can also be set to the boolean true to ignore all git and hg\n	// repositories, no matter what the name.\n	\"ignore_vcs_packages\": [],\n\n	// Custom path(s) to \"git\" binary for when it can't be automatically\n	// found on the system and a package includes a .git metadata directory.\n	// Supports more than one path to allow users to sync settings across\n	// operating systems.\n	\"git_binary\": [],\n\n	// This should NOT contain the name of the remote or branch - that will\n	// be automatically determined.\n	\"git_update_command\": [\"pull\", \"--ff\", \"--commit\"],\n\n	// Custom path(s) to \"hg\" binary for when it can't be automatically\n	// found on the system and a package includes a .hg metadata directory.\n	// Supports more than one path to allow users to sync settings across\n	// operating systems.\n	\"hg_binary\": [],\n\n	// For HG repositories, be sure to use \"default\" as the remote URL.\n	// This is the default behavior when cloning an HG repo.\n	\"hg_update_command\": [\"pull\", \"--update\"],\n\n	// Additional packages to ignore when listing unmanaged packages.\n	\"unmanaged_packages_ignore\": [],\n\n	// The downloader backends that should be used for HTTP(S) requests, split\n	// by operating system to allow for configuration to be shared.\n	//\n	// Valid options include: \"urllib\", \"curl\", \"wget\", (Windows-only) \"wininet\"\n	//\n	// This setting allows Windows users to bypass wininet and use urllib\n	// instead if they machine or network presents trouble to wininet. Some\n	// OS X and Linux users have also reported better luck with certain proxies\n	// using curl or wget instead of urllib.\n	//\n	// The \"curl\" and \"wget\" options require the command line \"curl\" or \"wget\"\n	// program installed and present in the PATH.\n	\"downloader_precedence\": {\n		\"windows\": [\"wininet\"],\n		\"osx\": [\"urllib\"],\n		\"linux\": [\"urllib\", \"curl\", \"wget\"]\n	},\n\n	// Directories to ignore when creating a package\n	\"dirs_to_ignore\": [\n		\".hg\", \".git\", \".svn\", \"_darcs\", \"CVS\"\n	],\n\n	// Files to ignore when creating a package\n	\"files_to_ignore\": [\n		\"*.pyc\", \".hgignore\", \".gitignore\", \".bzrignore\",\n		\"*.sublime-project\", \"*.sublime-workspace\", \"*.tmTheme.cache\"\n	],\n\n	// Files to include, even if they match a pattern in files_to_ignore\n	\"files_to_include\": [],\n\n	// When a package is created, copy it to this folder - defaults to Desktop\n	\"package_destination\": \"\",\n\n	// A way to create different packaging profiles for different types of\n	// package releases, such as for different platforms or binary-only\n	// releases.\n	//\n	// The key of the object will be the profile name and a list of them will\n	// be presenting when running the \"Create Package File\" command. The\n	// profile \"Default\" will use the top-level version on the following\n	// settings:\n	//\n	// - \"dirs_to_ignore\"\n	// - \"files_to_ignore\"\n	// - \"files_to_include\"\n	// - \"package_destination\"\n	//\n	// If a profile does not include one of those three setting, it will fall\n	// back to the top-level settings.\n	\"package_profiles\": {\n		\"Binaries Only\": {\n			// Exclude all .py files, but consequently include all .pyc files\n			\"files_to_ignore\": [\n				\"*.py\", \".hgignore\", \".gitignore\", \".bzrignore\",\n				\"*.sublime-project\", \"*.sublime-workspace\", \"*.tmTheme.cache\"\n			],\n\n			// Include __init__.py so Sublime Text will load the package\n			\"files_to_include\": [\n				\"__init__.py\"\n			]\n		}\n	},\n\n	// Enable the ability to run the tests - this is only for development\n	\"enable_tests\": false\n}\n",
-			"file": "/home/datacom/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "app/routes/group.php",
 			"settings":
 			{
-				"buffer_size": 7379,
-				"line_ending": "Unix",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"file": "tests/Auth/Domain/Entities/UserTest.php",
-			"settings":
-			{
-				"buffer_size": 2630,
+				"buffer_size": 1886,
 				"line_ending": "Unix"
 			}
 		}
@@ -304,16 +272,20 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "remo",
+		"last_filter": "insta",
 		"selected_items":
 		[
 			[
-				"remo",
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
 				"Package Control: Remove Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
+				"remo",
+				"Package Control: Remove Package"
 			],
 			[
 				"install",
@@ -352,6 +324,7 @@
 		"/home/datacom/Documents/Dev/php-tools/src",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation",
 		"/home/datacom/Documents/Dev/php-tools/tests",
 		"/home/datacom/Documents/Dev/php-tools/tests/Auth",
@@ -360,20 +333,36 @@
 	],
 	"file_history":
 	[
+		"/home/datacom/Documents/Dev/php-tools/project.sublime-project",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/PasswordAssertionConcern.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/AssertionConcern.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/CpfAssertionConcern.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities/CpfVerify.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/Group.php",
+		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Infraestructure/DbContext.php",
+		"/home/datacom/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/home/datacom/Documents/Dev/php-tools/vendor/slim/slim/Slim/Http/Request.php",
+		"/home/datacom/Documents/Dev/php-tools/composer.phar",
+		"/home/datacom/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Services/UserService.php",
+		"/home/datacom/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/User.php",
+		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/UserTest.php",
+		"/home/datacom/Documents/Dev/php-tools/project.sublime-workspace",
+		"/home/datacom/.config/sublime-text-3/Packages/PHP Companion/PHP Companion.sublime-settings",
+		"/home/datacom/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
+		"/home/datacom/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/datacom/Documents/Dev/php-tools/README.md",
 		"/home/datacom/Documents/Dev/php-tools/phpunit.xml.dist",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/PasswordAssertionConcern.php",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/AssertionConcern.php",
 		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/GroupTest.php",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/Group.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/functions/functions.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/AcompanhamentoController.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/rel/AcompanhamentoController.php",
 		"/home/datacom/Documents/Dev/read-xml/index.php",
 		"/home/datacom/Documents/Dev/read-xml/messages.xml",
 		"/home/datacom/Documents/Dev/php-tools/composer.json",
-		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
 		"/home/datacom/Documents/Dev/php-tools/public/index.php",
 		"/home/datacom/Documents/Dev/php-tools/app/routes/user.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Services/GroupService.php",
@@ -471,23 +460,7 @@
 		"/home/datacom/Vagrant/Datacom/public/draw-chart/bower.json",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/.gitignore",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/tests/config.php",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/tests/App/Domain/Services/UserServiceTest.php",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/phpunit.xml.dist",
-		"/home/datacom/Vagrant/Datacom/public/sigap/phpunit.xml.dist",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/src/Domain/Services/UserService.php",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/src/Domain/Entities/User.php",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/mov/solFicha.tpl",
-		"/home/datacom/Vagrant/Datacom/public/distrito/vendor/composer/installed.json",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/sol/start.tpl",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/forms/solFiltro.tpl",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/forms/sol.tpl",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/compras/detalhesProcesso.tpl",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/mov/ProcController.php",
-		"/home/datacom/Vagrant/Datacom/README.md",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/start.php",
-		"/home/datacom/Vagrant/Datacom/public/sigap/public/js/app/charts.js",
-		"/home/datacom/MEGA/Documents/Development/Typescript/curso-typescript/main.ts",
-		"/home/datacom/MEGA/Documents/Development/Typescript/curso-typescript/main.js"
+		"/home/datacom/Vagrant/Datacom/public/test-doctrine/tests/App/Domain/Services/UserServiceTest.php"
 	],
 	"find":
 	{
@@ -506,6 +479,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"f8",
+			"f12",
+			"f5",
+			"f10",
+			"f12",
+			"f6",
+			"f4",
+			"f5",
+			"f4",
 			"PasswordAssertionConcern",
 			"password",
 			"email",
@@ -576,78 +558,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Auth/Resource/Validation/PasswordAssertionConcern.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 505,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								262,
-								262
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/Auth/Resource/Validation/AssertionConcern.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2760,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2572,
-								2572
-							]
-						],
-						"settings":
-						{
-							"editorconfig": true,
-							"ensure_newline_at_eof_on_save": true,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"trim_trailing_white_space_on_save": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1932.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "src/Auth/Domain/Entities/User.php",
 					"semi_transient": false,
 					"settings":
@@ -659,13 +574,12 @@
 						"selection":
 						[
 							[
-								151,
-								151
+								454,
+								454
 							]
 						],
 						"settings":
 						{
-							"auto_complete": false,
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
@@ -681,77 +595,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/home/datacom/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/datacom/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7379,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6392,
-								6392
-							]
-						],
-						"settings":
-						{
-							"auto_complete": true,
-							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 3450.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 1,
 					"file": "tests/Auth/Domain/Entities/UserTest.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2630,
+						"buffer_size": 2787,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2590,
-								2590
+								2766,
+								2766
 							]
 						],
 						"settings":
@@ -759,19 +616,62 @@
 							"auto_complete": false,
 							"editorconfig": true,
 							"ensure_newline_at_eof_on_save": true,
-							"open_with_edit": true,
+							"spell_check": false,
 							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
 							"trim_trailing_white_space_on_save": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1817.0,
+						"translation.y": 1656.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/routes/group.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1813,
+								1813
+							]
+						],
+						"settings":
+						{
+							"editorconfig": true,
+							"ensure_newline_at_eof_on_save": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"trim_trailing_white_space_on_save": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 897.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -790,18 +690,32 @@
 			[
 				0,
 				0,
-				1,
+				2,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.823055162659,
 			1.0
 		]
 	},
@@ -835,6 +749,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"grou",
+				"app/routes/group.php"
+			],
+			[
+				"pro",
+				"project.sublime-project"
+			],
+			[
+				"projec",
+				"project.sublime-project"
+			],
+			[
+				"grou.p",
+				"app/routes/group.php"
+			],
+			[
+				"dbcon",
+				"src/Auth/Infraestructure/DbContext.php"
+			],
+			[
+				"userte",
+				"tests/Auth/Domain/Entities/UserTest.php"
+			],
+			[
+				"user.php",
+				"src/Auth/Domain/Entities/User.php"
+			],
 			[
 				"rea",
 				"README.md"
@@ -880,10 +822,6 @@
 				"src/Auth/Resource/Validation/AssertionConcern.php"
 			],
 			[
-				"grou",
-				"src/Auth/Domain/Entities/Group.php"
-			],
-			[
 				"groupte",
 				"tests/Auth/Domain/Entities/GroupTest.php"
 			],
@@ -914,10 +852,6 @@
 			[
 				"userre",
 				"php-tools/src/App/Infraestructure/Repositories/UserRepository.php"
-			],
-			[
-				"dbcon",
-				"php-tools/src/App/Infraestructure/DbContext.php"
 			],
 			[
 				"userrepo",
@@ -952,10 +886,6 @@
 				"src/App/Domain/Entities/User.php"
 			],
 			[
-				"user.php",
-				"app/routes/user.php"
-			],
-			[
 				"dbconte",
 				"src/App/Infraestructure/DbContext.php"
 			],
@@ -978,10 +908,6 @@
 			[
 				"group.php",
 				"src/App/Domain/Entities/Group.php"
-			],
-			[
-				"grou.p",
-				"app/routes/group.php"
 			],
 			[
 				"app",
@@ -1085,7 +1011,81 @@
 	{
 		"xdebug":
 		{
-			"hide_conflict": false
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"17":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"23":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"37":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"40":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"41":
+				{
+					"group": 0,
+					"index": 3
+				},
+				"42":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"43":
+				{
+					"group": 0,
+					"index": 4
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						2,
+						1
+					],
+					[
+						0,
+						1,
+						1,
+						2
+					],
+					[
+						1,
+						1,
+						2,
+						2
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.5,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					0.823055162659,
+					1.0
+				]
+			}
 		}
 	},
 	"show_minimap": true,
