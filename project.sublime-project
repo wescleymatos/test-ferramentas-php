@@ -1,4 +1,10 @@
 {
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
 	"phpcompanion":
 	{
 		"exclude_dir":

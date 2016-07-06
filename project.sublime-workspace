@@ -298,21 +298,25 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/datacom/Documents/Dev/php-tools",
-		"/home/datacom/Documents/Dev/php-tools/src",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation",
-		"/home/datacom/Documents/Dev/php-tools/tests",
-		"/home/datacom/Documents/Dev/php-tools/tests/Auth",
-		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain",
-		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities"
-	],
 	"file_history":
 	[
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/AcompanhamentoController.php",
+		"/home/datacom/Documents/Dev/php-tools/project.sublime-project",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/app_controller.php",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/index/adminique.html",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/start.tpl",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/form_filter.tpl",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/daf.tpl",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/solicitante.tpl",
+		"/home/datacom/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/datacom/Vagrant/Datacom/public/sigap/app.php",
+		"/home/datacom/Vagrant/Datacom/scotch_box.png",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/Group.php",
+		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Services/GroupService.php",
+		"/home/datacom/Documents/Dev/php-tools/src/Auth/Infraestructure/Repositories/GroupRepository.php",
+		"/home/datacom/Documents/Dev/php-tools/.gitignore",
+		"/home/datacom/Documents/Dev/php-tools/project.sublime-workspace",
 		"/home/datacom/Documents/Dev/php-tools/app/bootstrap.php",
 		"/home/datacom/Documents/Dev/php-tools/public/index.php",
 		"/home/datacom/Documents/Dev/php-tools/app/config-di.php",
@@ -321,11 +325,8 @@
 		"/home/datacom/Documents/Dev/php-tools/phpunit.xml.dist",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Utilities/CpfVerify.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/CpfAssertionConcern.php",
-		"/home/datacom/Documents/Dev/php-tools/app/routes/group.php",
-		"/home/datacom/Documents/Dev/php-tools/project.sublime-project",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/PasswordAssertionConcern.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Resource/Validation/AssertionConcern.php",
-		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Entities/Group.php",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Infraestructure/DbContext.php",
 		"/home/datacom/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
 		"/home/datacom/Documents/Dev/php-tools/vendor/slim/slim/Slim/Http/Request.php",
@@ -333,15 +334,12 @@
 		"/home/datacom/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
 		"/home/datacom/Documents/Dev/php-tools/src/Auth/Domain/Services/UserService.php",
 		"/home/datacom/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/datacom/Documents/Dev/php-tools/project.sublime-workspace",
 		"/home/datacom/.config/sublime-text-3/Packages/PHP Companion/PHP Companion.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings",
 		"/home/datacom/.config/sublime-text-3/Packages/User/PHP Companion.sublime-settings",
-		"/home/datacom/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/datacom/Documents/Dev/php-tools/README.md",
 		"/home/datacom/Documents/Dev/php-tools/tests/Auth/Domain/Entities/GroupTest.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/functions/functions.php",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/AcompanhamentoController.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/rel/AcompanhamentoController.php",
 		"/home/datacom/Documents/Dev/read-xml/index.php",
 		"/home/datacom/Documents/Dev/read-xml/messages.xml",
@@ -352,7 +350,6 @@
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Entities/Group.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Contracts/Repositories/GroupRepositoryInterface.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Infraestructure/Repositories/UserRepository.php",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/start.tpl",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/classes/Sim/Compras/OcPdfOld.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Contracts/Repositories/UserRepositoryInterface.php",
 		"/home/datacom/Documents/Dev/php-tools/src/App/Domain/Contracts/Services/UserServiceInterface.php",
@@ -365,8 +362,6 @@
 		"/home/datacom/Vagrant/Datacom/public/test-tools/public/index.php",
 		"/home/datacom/Vagrant/Xenial/Vagrantfile",
 		"/home/datacom/.config/sublime-text-3/Packages/User/getsetphp.sublime-snippet",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/app_controller.php",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/index/adminique.html",
 		"/home/datacom/Vagrant/Datacom/public/test-tools/src/App/Infraestructure/Repositories/UserRepository.php",
 		"/home/datacom/Vagrant/Datacom/public/test-tools/src/App/Domain/Entities/User.php",
 		"/home/datacom/Vagrant/Datacom/public/test-tools/config/yaml/App.Domain.Entities.User.dcm.yml",
@@ -399,7 +394,6 @@
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/config/cli-config.php",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/public/.htaccess",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/.htaccess",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app.php",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/cli-config.php",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/index.php",
 		"/home/datacom/Vagrant/Datacom/public/sm/app/.htaccess",
@@ -410,7 +404,6 @@
 		"/home/datacom/Vagrant/Datacom/public/sm/app/webroot/index.php",
 		"/home/datacom/Vagrant/Datacom/public/sm/app/webroot/.htaccess",
 		"/home/datacom/Vagrant/Datacom/public/sm/.htaccess",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/solicitante.tpl",
 		"/home/datacom/Vagrant/Datacom/Vagrantfile",
 		"/home/datacom/Vagrant/Datacom/public/test-doctrine/composer.json",
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/models/Mongo/Empresas.php",
@@ -429,18 +422,12 @@
 		"/home/datacom/Vagrant/Datacom/public/sigap/app/controllers/mov/SolController.php",
 		"/home/datacom/Vagrant/Datacom/public/sigap/sigap.sublime-project",
 		"/home/datacom/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
-		"/home/datacom/Vagrant/Datacom/public/sigap/app/views/acompanhamento/form_filter.tpl",
 		"/home/datacom/Vagrant/Datacom/public/charts/index.html",
 		"/home/datacom/Vagrant/Datacom/public/charts/js/index.js",
 		"/home/datacom/Vagrant/Datacom/public/charts/js/bar-chart.js",
 		"/home/datacom/Vagrant/Datacom/public/charts/getData.php",
 		"/home/datacom/Vagrant/Datacom/public/charts/js/charts.js",
-		"/home/datacom/Vagrant/Datacom/public/charts/bower.json",
-		"/home/datacom/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/datacom/MEGA/Temp/Preferences.sublime-settings",
-		"/home/datacom/Vagrant/Datacom/public/draw-chart/package.json",
-		"/home/datacom/Vagrant/Datacom/public/draw-chart/bower.json",
-		"/home/datacom/Vagrant/Datacom/public/test-doctrine/.gitignore"
+		"/home/datacom/Vagrant/Datacom/public/charts/bower.json"
 	],
 	"find":
 	{
@@ -459,6 +446,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"acesso",
 			"f8",
 			"f12",
 			"f5",
@@ -604,6 +592,18 @@
 		"selected_items":
 		[
 			[
+				"app",
+				"app/app_controller.php"
+			],
+			[
+				"admini",
+				"app/views/index/adminique.html"
+			],
+			[
+				"group.",
+				"app/routes/group.php"
+			],
+			[
 				"confi",
 				"app/config-di.php"
 			],
@@ -736,10 +736,6 @@
 				"src/App/Infraestructure/DbContext.php"
 			],
 			[
-				"admini",
-				"app/views/index/adminique.html"
-			],
-			[
 				"user.y",
 				"config/yaml/App.Domain.Entities.User.dcm.yml"
 			],
@@ -774,10 +770,6 @@
 			[
 				"group.php",
 				"src/App/Domain/Entities/Group.php"
-			],
-			[
-				"app",
-				"app.php"
 			],
 			[
 				"acompa",
@@ -958,7 +950,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 225.0,
+	"side_bar_width": 249.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
