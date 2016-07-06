@@ -73,6 +73,13 @@ class AssertionConcern
         }
     }
 
+    public static function assertArgumentInArray($aValue, $array, $aMessage)
+    {
+        if (!in_array($aValue, $array)) {
+            throw new InvalidArgumentException($aMessage);
+        }
+    }
+
     public static function assertStateFalse($aBoolean, $aMessage)
     {
         self::assertArgumentFalse($aBoolean, $aMessage);

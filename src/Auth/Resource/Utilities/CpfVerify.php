@@ -16,11 +16,7 @@ class CpfVerify
         // Verifica se o numero de digitos informados é igual a 11
         if (strlen($cpf) != 11) {
             return false;
-        }
-
-        // Verifica se nenhuma das sequências invalidas abaixo
-        // foi digitada. Caso afirmativo, retorna falso
-        else if ($cpf == '00000000000' ||
+        } elseif ($cpf == '00000000000' ||
             $cpf == '11111111111' ||
             $cpf == '22222222222' ||
             $cpf == '33333333333' ||
@@ -30,13 +26,8 @@ class CpfVerify
             $cpf == '77777777777' ||
             $cpf == '88888888888' ||
             $cpf == '99999999999') {
-
             return false;
-
-            // Calcula os digitos verificadores para verificar se o
-            // CPF é válido
         } else {
-
             for ($t = 9; $t < 11; $t++) {
                 for ($d = 0, $c = 0; $c < $t; $c++) {
                     $d += $cpf{$c} * (($t + 1) - $c);

@@ -6,7 +6,7 @@ class PasswordAssertionConcern
 {
     public static function assertIsValid(string $password)
     {
-        AssertionConcern.assertArgumentNotEmpty($password, 'Password is not valid.');
+        AssertionConcern::assertArgumentNotEmpty($password, 'Password is not valid.');
     }
 
     public static function encrypt(string $password): string

@@ -182,4 +182,10 @@ class UserTest extends \PHPUnit_Framework_TestCase
 
         $user->validate();
     }
+
+    public function testValidateMethod()
+    {
+        $this->user->setPassword('123456', '123456');
+        $this->user->validate();
+    }
 }

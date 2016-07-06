@@ -59,4 +59,9 @@ class GroupTest extends \PHPUnit_Framework_TestCase
         $group = new Group('');
         $group->validate();
     }
+
+    public function testValidateMethod()
+    {
+        $this->group->validate();
+    }
 }
