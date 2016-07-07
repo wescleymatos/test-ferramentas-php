@@ -12,8 +12,7 @@ class PasswordAssertionConcern
     public static function encrypt(string $password): string
     {
         $options = [
-            'cost' => 7,
-            'salt' => 'BCryptRequer46\467||i65ires22Chrcts46ffr6i8o'
+            'cost' => 7
         ];
 
         return password_hash($password, PASSWORD_BCRYPT, $options);
