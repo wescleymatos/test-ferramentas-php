@@ -10,21 +10,28 @@ Ferramentas para análise de código:
 * PHPLoc: Medição e Análise Estrutural
 * PHPCPD: Código Duplicado
 * PHP Depend: Análise e Métrica
+* PHP Metrics: Varias métricas para o código
 
 Principais comandos:
 * phpcs
-** phpcs --standard=PSR2 path/to/code
-** phpcs --report=xml --report-file=/path/to/file.xml /path/to/code
+** php vendor/bin/phpcs --standard=PSR2 src/
+** php vendor/bin/phpcs --report=xml --report-file=metrics/phpcs.xml src/
 
 * phpcpd
-** phpcpd path/to/code
+** php vendor/bin/phpcpd src/
 
 * phploc
-** phploc /path/to/code
-** phploc --log-csv path/to/file.csv --progress /path/to/code
+** php vendor/bin/phploc src/
+** php vendor/bin/phploc --log-csv metrics/phploc.csv --progress src/
 
 * pdepend
-** pdepend --summary-xml=path/to/file.xml --jdepend-chart=path/to/file.png --overview-pyramid=path/to/file.png path/to/code
+** php vendor/bin/pdepend --summary-xml=metrics/pdepend.xml --jdepend-chart=metrics/pdepend.png --overview-pyramid=metrics/pdepend.png src/
+
+* phpmd
+** php vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode
+
+* phpmetrics
+** php vendor/bin/phpmetrics --report-html=metrics/phpmetrics.html src/
 
 Ferramentas para Testes
 * PHPunit
