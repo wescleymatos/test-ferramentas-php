@@ -1,76 +1,66 @@
 <?php
 
-$groupService = $container->get('App\Domain\Services\GroupService');
+use Psr\Http\Message\ServerRequestInterface as Request;
+use Psr\Http\Message\ResponseInterface as Response;
 
-$app->get(
-    '/groups[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) {
+$groupService = $container->get('Auth\Domain\Services\GroupService');
+
+$app->get('/groups[/]', function (Request $request, Response $response) {
+    try {
         $response->getBody()->write("Hello grupo");
         return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
     }
-);
+});
 
-$app->get(
-    '/groups/{id}',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($groupService) {
+$app->get('/groups/{id}', function (Request $request, Response $response) use ($groupService) {
+    try {
         $id = $request->getAttribute('id');
 
         $group = $groupService->getById($id);
-        print_r($group);
 
         $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
         return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
     }
-);
+});
 
-$app->post(
-    '/groups[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($groupService) {
+$app->post('/groups[/]', function (Request $request, Response $response) use ($groupService) {
+    try {
         $data = $request->getParsedBody();
 
         $groupService->add($data['name']);
 
         $response->getBody()->write("name: {$data['name']}");
         return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
     }
-);
+});
 
-$app->put(
-    '/groups[/]',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response
-    ) use ($groupService) {
+$app->put('/groups[/]', function (Request $request, Response $response) use ($groupService) {
+    try {
         $data = $request->getParsedBody();
 
         $groupService->edit($data['id'], $data['name']);
 
         $response->getBody()->write("id: {$data['id']}, name: {$data['name']}");
         return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
     }
-);
+});
 
-$app->post(
-    '/groups/delete/{id}',
-    function (
-        Psr\Http\Message\ServerRequestInterface $request,
-        Psr\Http\Message\ResponseInterface $response,
-        $args
-    ) use ($groupService) {
-var_dump($args); exit();
+$app->post('/groups/delete[/]', function (Request $request, Response $response) use ($groupService) {
+    try {
         $data = $request->getParsedBody();
         $groupService->delete($data['id']);
 
         $response->getBody()->write("daletado!");
         return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
     }
-);
+});

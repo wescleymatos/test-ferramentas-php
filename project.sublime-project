@@ -1,0 +1,17 @@
+{
+	"phpcompanion":
+	{
+		"exclude_dir":
+		[
+			"vendor",
+			"build"
+		]
+	},
+	"settings":
+	{
+		"xdebug":
+		{
+			"url": "http://localhost:8000/"
+		}
+	}
+}
