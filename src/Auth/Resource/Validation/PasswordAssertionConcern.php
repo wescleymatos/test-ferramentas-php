@@ -17,4 +17,9 @@ class PasswordAssertionConcern
 
         return password_hash($password, PASSWORD_BCRYPT, $options);
     }
+
+    public static function verify(string $password, string $hash): bool
+    {
+        return password_verify($password, $hash);
+    }
 }

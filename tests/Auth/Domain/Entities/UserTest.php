@@ -62,7 +62,7 @@ class UserTest extends \PHPUnit_Framework_TestCase
         $this->user->setPassword('123456', '123456');
         $return = $this->user->getPassword();
 
-        $this->assertEquals(PasswordAssertionConcern::encrypt('123456'), $return);
+        $this->assertTrue(PasswordAssertionConcern::verify('123456', $return));
     }
 
     public function testPasswordDifferentConfirmPassword()
