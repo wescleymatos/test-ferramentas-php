@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="php-tools" default="start">
+    <target name="start" depends="phpunit,phpcodesniffer,phpcpd,phpmd,phpdepend,phploc"/>
+    <!-- <target name="composer">
+        <available file="composer.phar" property="composer.exists"/>
+        <echo msg="${composer.exists}"/>
+        <if>
+            <not>
+                <isset property="composer.exists"/>
+            </not>
+            <then>
+                <php expression="file_put_contents('composer.phar',file_get_contents('https://getcomposer.org/installer'))" />
+                <exec command="php composer.phar"/>
+                <composer command="install"/>
+            </then>
+        </if>
+    </target>
+    <target name="update">
+        <composer command="update"/>
+    </target> -->
+    <target name="phpunit">
+        <phpunit
+            bootstrap="vendor/autoload.php"
+            haltonfailure="true"
+            printsummary="true"
+            haltonerror="true">
+            <batchtest>
+                <fileset dir="tests">
+                    <include name="**/*Test.php"/>
+                </fileset>
+            </batchtest>
+        </phpunit>
+    </target>
+    <target name="phpcodesniffer">
+       <phpcodesniffer
+            standard="PSR2"
+            description="PSR2 standards"
+            docGenerator="HTML"
+            docFile="metrics/codesniffer.html"
+            haltonerror="true">
+            <fileset dir="src">
+                <include name="*.php"/>
+            </fileset>
+            <formatter type="full" usefile="false"/>
+       </phpcodesniffer>
+    </target>
+    <target name="phpcpd">
+        <phpcpd>
+            <fileset dir="src" id="filestocpd">
+                <include name="**/*.php" />
+            </fileset>
+            <formatter type="pmd" outfile="metrics/pmd-cpd.xml"/>
+        </phpcpd>
+    </target>
+    <target name="phploc">
+        <phploc
+            countTests="true"
+            reportType="csv"
+            reportName="phploc"
+            reportDirectory="metrics">
+            <fileset dir="src">
+                <include name="**/*.php" />
+            </fileset>
+        </phploc>
+    </target>
+    <target name="phpmd">
+        <phpmd>
+            <fileset dir="src">
+                <include name="**/*.php" />
+            </fileset>
+            <formatter type="xml" outfile="metrics/phpmd.xml"/>
+        </phpmd>
+    </target>
+    <target name="phpdepend">
+        <phpdepend haltonerror="true">
+            <fileset dir="src">
+                <include name="**/*.php" />
+            </fileset>
+            <logger type="jdepend-xml" outfile="metrics/jdepend.xml"/>
+            <analyzer type="coderank-mode" value="method"/>
+        </phpdepend>
+    </target>
+</project>

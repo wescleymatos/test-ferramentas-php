@@ -25,7 +25,7 @@ Principais comandos:
 ** php vendor/bin/phploc --log-csv metrics/phploc.csv --progress src/
 
 * pdepend
-** php vendor/bin/pdepend --summary-xml=metrics/pdepend.xml --jdepend-chart=metrics/pdepend.png --overview-pyramid=metrics/pdepend.png src/
+** php vendor/bin/pdepend --summary-xml=metrics/pdepend.xml --jdepend-chart=metrics/jdepend.png --overview-pyramid=metrics/pdepend.png src/
 
 * phpmd
 ** php vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode
