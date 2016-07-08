@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="php-tools" default="start">
     <target name="start" depends="phpunit,phpcodesniffer,phpcpd,phpmd,phpdepend,phploc"/>
-    <!-- <target name="composer">
+    <target name="composer">
         <available file="composer.phar" property="composer.exists"/>
         <echo msg="${composer.exists}"/>
         <if>
@@ -17,7 +17,7 @@
     </target>
     <target name="update">
         <composer command="update"/>
-    </target> -->
+    </target>
     <target name="phpunit">
         <phpunit
             bootstrap="vendor/autoload.php"
