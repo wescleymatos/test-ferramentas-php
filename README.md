@@ -1,4 +1,7 @@
-# test-ferramentas-php ![alt tag](https://travis-ci.org/wescleymatos/test-ferramentas-php.svg?branch=dev)
+![alt tag](https://travis-ci.org/wescleymatos/test-ferramentas-php.svg?branch=dev) ![alt tag](https://scrutinizer-ci.com/g/wescleymatos/test-ferramentas-php/badges/quality-score.png?b=dev)
+
+# test-ferramentas-php 
+
 App para realizar testes com ferramentas php
 
 Ferramentas de Gerenciamento de Dependência
