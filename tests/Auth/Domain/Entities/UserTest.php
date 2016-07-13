@@ -2,9 +2,10 @@
 
 namespace Auth\Domain\Entities;
 
+use PHPUnit\Framework\TestCase;
 use Auth\Resource\Validation\PasswordAssertionConcern;
 
-class UserTest extends \PHPUnit_Framework_TestCase
+class UserTest extends TestCase
 {
     private $user;
     private $group;

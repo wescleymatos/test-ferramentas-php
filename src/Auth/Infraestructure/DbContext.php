@@ -6,12 +6,11 @@ use \PDO;
 
 class DbContext
 {
-    private $stringConnection = 'sqlite::memory:';
     private $pdo;
 
     public function __construct()
     {
-        $this->pdo = new PDO($this->stringConnection);
+        $this->pdo = new PDO(DSN);
     }
 
     public function getContext()
