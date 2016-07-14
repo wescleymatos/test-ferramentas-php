@@ -1,7 +1,7 @@
 <?php
 require '../vendor/autoload.php';
 
-define('DSN', 'sqlite:' . __DIR__ . '/data/db.sqlite');
+define('DSN', '' . __DIR__ . '/data/db.sqlite');
 
 use Auth\Infraestructure\DbContext;
 use DI\ContainerBuilder;

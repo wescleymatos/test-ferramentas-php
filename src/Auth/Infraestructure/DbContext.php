@@ -2,20 +2,29 @@
 
 namespace Auth\Infraestructure;
 
-use \PDO;
+use Doctrine\ORM\Tools\Setup;
+use Doctrine\ORM\EntityManager;
 
 class DbContext
 {
-    private $pdo;
+    private $isDevMode = true;
+    private $conn = array(
+        'driver' => 'pdo_sqlite',
+        'path' => DNS
+    );
 
     public function __construct()
     {
-        $this->pdo = new PDO(DSN);
     }
 
     public function getContext()
     {
-        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        return $this->pdo;
+        return EntityManager::create(
+            $this->conn,
+            Setup::createYAMLMetadataConfiguration(
+                array('/var/www/public/test-tools/config/yaml'),
+                $this->isDevMode
+            )
+        );
     }
 }
