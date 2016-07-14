@@ -20,8 +20,8 @@
             <directory>src</directory>
         </whitelist>
     </filter>
-    <!--<logging>
+    <logging>
         <log type="coverage-html" target="./metrics/coverage" charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80"/>
         <log type="testdox-html" target="./metrics/testdox.html"/>
-    </logging>-->
+    </logging>
 </phpunit>
