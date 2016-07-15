@@ -15,49 +15,26 @@ class GroupRepository implements GroupRepositoryInterface
         $this->context = $context->getContext();
     }
 
-    public function create(Group $group) :int
+    public function create(Group $group)
     {
-        $stm = $this->context->prepare('INSERT INTO groups (name) VALUES (:name)');
-        $stm->bindValue(':name', $group->getName(), \PDO::PARAM_STR);
-
-        if (!$stm->execute()) {
-            throw new \RuntimeException('Fail to insert group data');
-        }
-
-        return $this->context->lastInsertId();
+        $this->context->persist($group);
+        $this->context->flush();
     }
 
     public function update(Group $group)
     {
-        $stm = $this->context->prepare('UPDATE groups SET name = :name WHERE id = :id');
-        $stm->bindValue(':id', $group->getId(), \PDO::PARAM_INT);
-        $stm->bindValue(':name', $group->getName(), \PDO::PARAM_STR);
-
-        if (!$stm->execute()) {
-            throw new \RuntimeException('Fail to update group data');
-        }
+        $this->context->merge($group);
+        $this->context->flush();
     }
 
     public function delete(Group $group)
     {
-        $stm = $this->context->prepare('DELETE FROM groups WHERE id = :id');
-        $stm->bindValue(':id', $group->getId(), \PDO::PARAM_INT);
-
-        if (!$stm->execute()) {
-            throw new \RuntimeException('Fail to delete group data');
-        }
+        $this->context->remove($group);
+        $this->context->flush();
     }
 
     public function get(int $id): Group
     {
-        $stm = $this->context->prepare('SELECT * FROM groups WHERE id = :id');
-        $stm->bindValue(':id', $id, \PDO::PARAM_INT);
-
-        if (!$stm->execute()) {
-            throw new \RuntimeException('Fail to select group data');
-        }
-
-        $stm->setFetchMode(\PDO::FETCH_CLASS|\PDO::FETCH_PROPS_LATE, 'Auth\Domain\Entities\Group');
-        return $stm->fetch();
+        return $this->context->find('App\Domain\Entities\Group', $id);
     }
 }

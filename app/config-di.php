@@ -15,5 +15,5 @@ return [
     GroupRepositoryInterface::class => DI\object(GroupRepository::class),
     UserServiceInterface::class => DI\object(UserService::class),
     GroupServiceInterface::class => DI\object(GroupService::class),
-    DbContext::class => DI\object(DbContext::class)
+    DbContext::class => DI\object(DbContext::class)->constructor(CONN, MAPPER, DEVMOD)
 ];

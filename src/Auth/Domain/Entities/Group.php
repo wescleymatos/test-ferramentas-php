@@ -3,6 +3,7 @@
 namespace Auth\Domain\Entities;
 
 use Auth\Resource\Validation\AssertionConcern;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class Group
 {
@@ -13,6 +14,7 @@ class Group
     public function __construct(string $name)
     {
         $this->name = $name;
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): int

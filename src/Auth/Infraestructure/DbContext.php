@@ -11,7 +11,7 @@ class DbContext
     private $mapper;
     private $conn;
 
-    public function __construct($conn, $mapper, $isDevMode = true)
+    public function __construct($conn, $mapper, $isDevMode)
     {
         $this->conn = $conn;
         $this->mapper = $mapper;

@@ -1,0 +1,24 @@
+Auth\Domain\Entities\User:
+  type: entity
+  manyToOne:
+    group:
+      targetEntity: Auth\Domain\Entities\Group
+      inversedBy: users
+      joinColumn:
+        name: group_id
+        referencedColumnName: id
+  table: users
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+    email:
+      type: string
+    password:
+      type: string
+    cpf:
+      type: string

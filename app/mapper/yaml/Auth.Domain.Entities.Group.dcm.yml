@@ -1,5 +1,9 @@
 Auth\Domain\Entities\Group:
   type: entity
+  oneToMany:
+    users:
+      targetEntity: Auth\Domain\Entities\User
+      mappedBy: group
   table: groups
   id:
     id:
@@ -9,3 +13,6 @@ Auth\Domain\Entities\Group:
   fields:
     name:
       type: string
+      length: 10
+      unique: true
+      nullable: false
