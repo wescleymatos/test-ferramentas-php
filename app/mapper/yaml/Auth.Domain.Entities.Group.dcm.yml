@@ -1,0 +1,11 @@
+Auth\Domain\Entities\Group:
+  type: entity
+  table: groups
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string

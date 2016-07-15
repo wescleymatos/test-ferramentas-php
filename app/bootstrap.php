@@ -1,12 +1,14 @@
 <?php
 require '../vendor/autoload.php';
 
-define('DSN', '' . __DIR__ . '/data/db.sqlite');
-
 use Auth\Infraestructure\DbContext;
 use DI\ContainerBuilder;
 
-$entityManager = new DbContext();
+$conn = [
+    'driver' => 'pdo_sqlite',
+    'path' => __DIR__ . '/data/db.sqlite'
+];
+$entityManager = new DbContext($conn, __DIR__ . '/mapper/yaml');
 $context = $entityManager->getContext();
 
 $containerBuilder = new ContainerBuilder();

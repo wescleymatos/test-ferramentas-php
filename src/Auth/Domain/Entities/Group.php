@@ -8,7 +8,7 @@ class Group
 {
     private $id;
     private $name;
-    private $users = array();
+    private $users;
 
     public function __construct(string $name)
     {

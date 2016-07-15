@@ -7,14 +7,15 @@ use Doctrine\ORM\EntityManager;
 
 class DbContext
 {
-    private $isDevMode = true;
-    private $conn = array(
-        'driver' => 'pdo_sqlite',
-        'path' => DNS
-    );
+    private $isDevMode;
+    private $mapper;
+    private $conn;
 
-    public function __construct()
+    public function __construct($conn, $mapper, $isDevMode = true)
     {
+        $this->conn = $conn;
+        $this->mapper = $mapper;
+        $this->isDevMode = $isDevMode;
     }
 
     public function getContext()
@@ -22,7 +23,7 @@ class DbContext
         return EntityManager::create(
             $this->conn,
             Setup::createYAMLMetadataConfiguration(
-                array('/var/www/public/test-tools/config/yaml'),
+                array($this->mapper),
                 $this->isDevMode
             )
         );
