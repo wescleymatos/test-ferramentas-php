@@ -22,8 +22,8 @@ $app->get('/users/{id}', function (Request $request, Response $response) use ($u
 $app->post('/users[/]', function (Request $request, Response $response) use ($userService) {
     try {
         $data = $request->getParsedBody();
-        $userService->add($data['name'], $data['last'], $data['idGroup']);
-        $response->getBody()->write("name: {$data['name']}, last: {$data['last']}");
+        $userService->add($data['name'], $data['email'], $data['cpf'], (int)$data['idGroup']);
+        $response->getBody()->write("name: {$data['name']}, email: {$data['email']}");
 
     } catch (Exception $e) {
         $response->getBody()->write($e->getMessage());

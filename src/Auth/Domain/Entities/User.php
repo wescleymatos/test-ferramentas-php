@@ -2,6 +2,7 @@
 
 namespace Auth\Domain\Entities;
 
+use Auth\Domain\Entities\Group;
 use Auth\Resource\Validation\AssertionConcern;
 use Auth\Resource\Validation\CpfAssertionConcern;
 use Auth\Resource\Validation\PasswordAssertionConcern;
@@ -79,6 +80,16 @@ class User
         CpfAssertionConcern::assertIsValid($cpf);
 
         $this->cpf = $cpf;
+    }
+
+    public function getGroup(): Group
+    {
+        return $this->group;
+    }
+
+    public function setGroup(Group $group)
+    {
+        $this->group = $group;
     }
 
     public function validate()
