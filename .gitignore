@@ -4,6 +4,8 @@ composer.phar
 /bower_components/*
 /metrics/*
 
+*.sqlite
+
 # cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache

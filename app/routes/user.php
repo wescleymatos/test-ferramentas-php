@@ -22,7 +22,7 @@ $app->get('/users/{id}', function (Request $request, Response $response) use ($u
 $app->post('/users[/]', function (Request $request, Response $response) use ($userService) {
     try {
         $data = $request->getParsedBody();
-        $userService->register($data['name'], $data['email'], $data['cpf'], $data['password'], $data['confirmPassword'], intval($data['idGroup']));
+        $userService->register($data['name'], $data['email'], $data['cpf'], $data['password'], $data['confirmPassword'], (int)$data['idGroup']);
         $response->getBody()->write("name: {$data['name']}, email: {$data['email']}");
 
     } catch (Exception $e) {

@@ -6,8 +6,12 @@ use Auth\Domain\Entities\User;
 
 interface UserServiceInterface
 {
+    public function authenticate(string $email, string $password): User;
     public function register(string $name, string $email, string $cpf, string $password, string $confirmPassword, int $idGroup);
-    public function edit(int $id, string $name, string $email, $cpf, int $idGroup);
-    public function delete(int $id);
+    public function changeInformation(string $name, string $email, $cpf, int $idGroup);
+    public function changePassword(string $email, string $password, string $newPassword, string $confirmNewPassword);
+    public function resetPassword(string $email): string;
+    public function remove(int $id);
     public function getById(int $id): User;
+    public function getByEmail(string $email): User;
 }
