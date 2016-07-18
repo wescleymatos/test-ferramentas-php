@@ -19,11 +19,12 @@ class UserService implements UserServiceInterface
         $this->groupService = $groupService;
     }
 
-    public function add(string $name, string $email, string $cpf, int $idGroup)
+    public function register(string $name, string $email, string $cpf, string $password, string $confirmPassword, int $idGroup)
     {
         $group = $this->groupService->getById($idGroup);
 
         $user = new User($name, $email, $cpf, $group);
+        $user->setPassword($password, $confirmPassword);
         $user->validate();
 
         $this->userRepository->create($user);

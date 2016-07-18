@@ -17,7 +17,7 @@ class UserRepository implements UserRepositoryInterface
 
     public function create(User $user)
     {
-        $this->context->persist($user);
+        $this->context->merge($user);
         $this->context->flush();
     }
 

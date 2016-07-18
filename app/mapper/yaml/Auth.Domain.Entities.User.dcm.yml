@@ -1,5 +1,6 @@
 Auth\Domain\Entities\User:
   type: entity
+  repositoryClass: Auth\Infraestructure\Repositories\UserRepository
   manyToOne:
     group:
       targetEntity: Auth\Domain\Entities\Group
@@ -16,9 +17,19 @@ Auth\Domain\Entities\User:
   fields:
     name:
       type: string
+      nullable: false
+      length: 100
     email:
       type: string
+      unique: true
+      nullable: false
+      length: 50
     password:
       type: string
+      nullable: false
+      length: 100
     cpf:
       type: string
+      unique: true
+      nullable: false
+      length: 20

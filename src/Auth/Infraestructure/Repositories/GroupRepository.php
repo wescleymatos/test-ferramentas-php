@@ -35,6 +35,6 @@ class GroupRepository implements GroupRepositoryInterface
 
     public function get(int $id): Group
     {
-        return $this->context->find('App\Domain\Entities\Group', $id);
+        return $this->context->find('Auth\Domain\Entities\Group', $id);
     }
 }

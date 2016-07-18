@@ -1,5 +1,6 @@
 Auth\Domain\Entities\Group:
   type: entity
+  repositoryClass: Auth\Infraestructure\Repositories\GroupRepository
   oneToMany:
     users:
       targetEntity: Auth\Domain\Entities\User
