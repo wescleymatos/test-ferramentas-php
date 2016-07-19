@@ -5,14 +5,8 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $userService = $container->get('Auth\Domain\Services\UserService');
 
-// $app->get('/users[/]', function (Request $request, Response $response) {
-//     $response->getBody()->write("Hello usuario");
-//     return $response;
-// });
-
 $app->get('/users[/{email}]', function (Request $request, Response $response, $args) use ($userService) {
-    //$email = $request->getAttribute('id');
-    var_dump($args['email']); exit();
+    $email = $request->getAttribute('email');
 
     $user = $userService->getByEmail($email);
 

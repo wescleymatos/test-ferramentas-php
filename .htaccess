@@ -1,6 +1,7 @@
 <Limit GET POST PUT DELETE>
     order deny,allow
     allow from all
+    AllowOverRide All
 </Limit>
 <IfModule mod_rewrite.c>
     RewriteEngine on
