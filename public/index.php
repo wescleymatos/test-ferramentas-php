@@ -14,12 +14,15 @@ $c = new \Slim\Container($configuration);
 $app = new \Slim\App($c);
 
 $app->get('/', function (Request $request, Response $response) {
-        $response->getBody()->write("Hello Mundo");
+        $response->withStatus(200)
+            ->withHeader('Content-Type', 'application/json;charset=utf-8')
+            ->withJson(['data' => 'Olá Mundo']);
+
         return $response;
     }
 );
 
-require '../app/routes/group.php';
-require '../app/routes/user.php';
+require './routes/group.php';
+require './routes/user.php';
 
 $app->run();
