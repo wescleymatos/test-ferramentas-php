@@ -5,7 +5,16 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $groupService = $container->get('Auth\Domain\Services\GroupService');
 
-$app->get('/groups[/{id}]', function (Request $request, Response $response) use ($groupService) {
+$app->get('/groups[/]', function (Request $request, Response $response) {
+    try {
+        $response->getBody()->write("Hello grupo");
+        return $response;
+    } catch (Throwable $e) {
+        echo $e->getMessage();
+    }
+});
+
+$app->get('/groups/{id}', function (Request $request, Response $response) use ($groupService) {
     try {
         $id = $request->getAttribute('id');
 

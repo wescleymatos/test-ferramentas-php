@@ -35,6 +35,6 @@ class UserRepository implements UserRepositoryInterface
 
     public function get(int $id): User
     {
-        return $this->context->find('App\Domain\Entities\User', $id);
+        return $this->context->find('Auth\Domain\Entities\User', $id);
     }
 }
