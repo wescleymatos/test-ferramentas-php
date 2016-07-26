@@ -21,6 +21,8 @@ $app->get('/groups/{id}', function (Request $request, Response $response) use ($
         if (!empty($id)) {
             $group = $groupService->getById($id);
 
+            var_dump($group->getUsers());
+
             $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
             return $response;
         }
