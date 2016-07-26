@@ -1,6 +1,6 @@
 ![alt tag](https://travis-ci.org/wescleymatos/test-ferramentas-php.svg?branch=dev) ![alt tag](https://scrutinizer-ci.com/g/wescleymatos/test-ferramentas-php/badges/quality-score.png?b=dev)
 
-# test-ferramentas-php 
+# test-ferramentas-php
 
 App para realizar testes com ferramentas php
 
@@ -41,7 +41,17 @@ Ferramentas para Testes
 * Selenium IDE
 
 Ferramentas de ORM
-* Doctrine
+*
+** php vendor/bin/doctrine orm:schema-tool:drop --force
+** php vendor/bin/doctrine orm:schema-tool:create
+** php vendor/bin/doctrine orm:schema-tool:update --force
+
 
 Ferramentas de Injeção de Dependência
 * PHP-DI
+
+Ex:
+    return [
+        GroupServiceInterface::class => DI\object(GroupService::class),
+        DbContext::class => DI\object(DbContext::class)->constructor(CONN, MAPPER, DEVMOD)
+    ];

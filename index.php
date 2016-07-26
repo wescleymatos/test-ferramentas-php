@@ -1,6 +1,6 @@
 <?php
 
-$container = require '../app/bootstrap.php';
+$container = require 'app/bootstrap.php';
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -22,7 +22,7 @@ $app->get('/', function (Request $request, Response $response) {
     }
 );
 
-require './routes/group.php';
-require './routes/user.php';
+require 'app/routes/group.php';
+require 'app/routes/user.php';
 
 $app->run();
