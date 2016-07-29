@@ -10,6 +10,7 @@ class Action
     private $id;
     private $name;
     private $method;
+    private $groups;
 
     public function __construct(string $name, Method $method)
     {

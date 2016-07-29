@@ -1,9 +1,13 @@
-Auth\Domain\Entities\Group:
+Domain\Entities\Group:
   type: entity
-  repositoryClass: Auth\Infraestructure\Repositories\GroupRepository
+  repositoryClass: Infraestructure\Repositories\GroupRepository
   oneToMany:
     users:
-      targetEntity: Auth\Domain\Entities\User
+      targetEntity: Domain\Entities\User
+      mappedBy: group
+  oneToMany:
+    actions:
+      targetEntity: Domain\Entities\Action
       mappedBy: group
   table: groups
   id:

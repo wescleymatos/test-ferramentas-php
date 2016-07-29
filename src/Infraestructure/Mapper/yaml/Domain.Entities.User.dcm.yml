@@ -1,9 +1,9 @@
-Auth\Domain\Entities\User:
+Domain\Entities\User:
   type: entity
-  repositoryClass: Auth\Infraestructure\Repositories\UserRepository
-  manyToOne:
+  repositoryClass: Infraestructure\Repositories\UserRepository
+  oneToOne:
     group:
-      targetEntity: Auth\Domain\Entities\Group
+      targetEntity: Domain\Entities\Group
       inversedBy: users
       joinColumn:
         name: group_id

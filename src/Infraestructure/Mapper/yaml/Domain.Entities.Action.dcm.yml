@@ -1,0 +1,22 @@
+Domain\Entities\Action:
+  type: entity
+  repositoryClass: Infraestructure\Repositories\ActionRepository
+  oneToMany:
+    groups:
+      targetEntity: Domain\Entities\Group
+      mappedBy: action
+  table: actions
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    name:
+      type: string
+      length: 20
+      nullable: false
+    method:
+      type: string
+      length: 10
+      nullable: false
