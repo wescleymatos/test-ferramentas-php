@@ -1,14 +1,14 @@
 <?php
 
-use Auth\Domain\Contracts\Repositories\UserRepositoryInterface;
-use Auth\Domain\Contracts\Repositories\GroupRepositoryInterface;
-use Auth\Infraestructure\Repositories\UserRepository;
-use Auth\Infraestructure\Repositories\GroupRepository;
-use Auth\Domain\Contracts\Services\UserServiceInterface;
-use Auth\Domain\Contracts\Services\GroupServiceInterface;
-use Auth\Domain\Services\UserService;
-use Auth\Domain\Services\GroupService;
-use Auth\Infraestructure\DbContext;
+use Domain\Contracts\Repositories\UserRepositoryInterface;
+use Domain\Contracts\Repositories\GroupRepositoryInterface;
+use Infraestructure\Repositories\UserRepository;
+use Infraestructure\Repositories\GroupRepository;
+use Domain\Contracts\Services\UserServiceInterface;
+use Domain\Contracts\Services\GroupServiceInterface;
+use Domain\Services\UserService;
+use Domain\Services\GroupService;
+use Infraestructure\DbContext;
 
 return [
     UserRepositoryInterface::class => DI\object(UserRepository::class),
