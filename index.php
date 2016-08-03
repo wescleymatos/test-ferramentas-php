@@ -1,6 +1,6 @@
 <?php
 
-$container = require 'app/bootstrap.php';
+$container = require 'bootstrap.php';
 
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
