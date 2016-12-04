@@ -3,7 +3,7 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-$groupService = $container->get('Auth\Domain\Services\GroupService');
+$groupService = $container->get('Domain\Services\GroupService');
 
 $app->get('/groups[/]', function (Request $request, Response $response) {
     try {
@@ -18,10 +18,14 @@ $app->get('/groups/{id}', function (Request $request, Response $response) use ($
     try {
         $id = $request->getAttribute('id');
 
-        $group = $groupService->getById($id);
+        if (!empty($id)) {
+            $group = $groupService->getById($id);
 
-        $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
-        return $response;
+            var_dump($group->getUsers());
+
+            $response->getBody()->write("id: {$group->getId()}, name: {$group->getName()}");
+            return $response;
+        }
     } catch (Throwable $e) {
         echo $e->getMessage();
     }

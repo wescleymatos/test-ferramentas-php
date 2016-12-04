@@ -1,9 +1,0 @@
-<Limit GET POST PUT DELETE>
-    order deny,allow
-    allow from all
-</Limit>
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule . index.php [L]
-</IfModule>

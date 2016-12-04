@@ -1,6 +1,6 @@
 ![alt tag](https://travis-ci.org/wescleymatos/test-ferramentas-php.svg?branch=dev) ![alt tag](https://scrutinizer-ci.com/g/wescleymatos/test-ferramentas-php/badges/quality-score.png?b=dev)
 
-# test-ferramentas-php 
+# test-ferramentas-php
 
 App para realizar testes com ferramentas php
 
@@ -15,33 +15,44 @@ Ferramentas para análise de código:
 * PHP Depend: Análise e Métrica
 * PHP Metrics: Varias métricas para o código
 
+
 Principais comandos:
-* phpcs
-** php vendor/bin/phpcs --standard=PSR2 src/
-** php vendor/bin/phpcs --report=xml --report-file=metrics/phpcs.xml src/
 
-* phpcpd
-** php vendor/bin/phpcpd src/
+PHPCS
+* php vendor/bin/phpcs --standard=PSR2 src/
+* php vendor/bin/phpcs --report=xml --report-file=metrics/phpcs.xml src/
 
-* phploc
-** php vendor/bin/phploc src/
-** php vendor/bin/phploc --log-csv metrics/phploc.csv --progress src/
+PHPCPD
+* php vendor/bin/phpcpd src/
 
-* pdepend
-** php vendor/bin/pdepend --summary-xml=metrics/pdepend.xml --jdepend-chart=metrics/jdepend.png --overview-pyramid=metrics/pdepend.png src/
+PHPLOC
+* php vendor/bin/phploc src/
+* php vendor/bin/phploc --log-csv metrics/phploc.csv --progress src/
 
-* phpmd
-** php vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode
+PDEPEND
+* php vendor/bin/pdepend --summary-xml=metrics/pdepend.xml --jdepend-chart=metrics/jdepend.png --overview-pyramid=metrics/pdepend.png src/
 
-* phpmetrics
-** php vendor/bin/phpmetrics --report-html=metrics/phpmetrics.html src/
+PHPMD
+* php vendor/bin/phpmd src/ text cleancode,codesize,controversial,design,naming,unusedcode
+
+PHPMETRICS
+* php vendor/bin/phpmetrics --report-html=metrics/phpmetrics.html src/
 
 Ferramentas para Testes
 * PHPunit
 * Selenium IDE
 
-Ferramentas de ORM
-* Doctrine
+Ferramentas de ORM - DOCTRINE 
 
-Ferramentas de Injeção de Dependência
-* PHP-DI
+* php vendor/bin/doctrine orm:schema-tool:drop --force
+* php vendor/bin/doctrine orm:schema-tool:create
+* php vendor/bin/doctrine orm:schema-tool:update --force
+
+
+Ferramentas de Injeção de Dependência - PHP-DI
+
+Ex:
+    return [
+        GroupServiceInterface::class => DI\object(GroupService::class),
+        DbContext::class => DI\object(DbContext::class)->constructor(CONN, MAPPER, DEVMOD)
+    ];

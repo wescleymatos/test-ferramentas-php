@@ -1,8 +1,20 @@
-composer.phar
-/vendor/*
-/node_modules/*
-/bower_components/*
+#My App
 /metrics/*
+*.sqlite
+
+#locaweb config
+php.ini
+
+#composer
+composer.phar
+composer.lock
+/vendor/*
+
+#npm
+/node_modules/*
+
+#bower
+/bower_components/*
 
 # cache files for sublime text
 *.tmlanguage.cache
@@ -31,7 +43,3 @@ bh_unicode_properties.cache
 # Sublime-github package stores a github token in this file
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
-
-
-#locaweb config
-php.ini

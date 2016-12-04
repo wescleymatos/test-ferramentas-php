@@ -3,17 +3,17 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-$userService = $container->get('Auth\Domain\Services\UserService');
+$userService = $container->get('Domain\Services\UserService');
 
 $app->get('/users[/]', function (Request $request, Response $response) {
     $response->getBody()->write("Hello usuario");
     return $response;
 });
 
-$app->get('/users/{id}', function (Request $request, Response $response) use ($userService) {
-    $id = $request->getAttribute('id');
+$app->get('/users/{email}', function (Request $request, Response $response) use ($userService) {
+    $email = $request->getAttribute('email');
 
-    $user = $userService->getById($id);
+    $user = $userService->getByEmail($email);
 
     $response->getBody()->write("id: {$user->getId()}, name: {$user->getName()}");
     return $response;
@@ -22,8 +22,8 @@ $app->get('/users/{id}', function (Request $request, Response $response) use ($u
 $app->post('/users[/]', function (Request $request, Response $response) use ($userService) {
     try {
         $data = $request->getParsedBody();
-        $userService->add($data['name'], $data['last'], $data['idGroup']);
-        $response->getBody()->write("name: {$data['name']}, last: {$data['last']}");
+        $userService->register($data['name'], $data['email'], $data['cpf'], $data['password'], $data['confirmPassword'], (int)$data['idGroup']);
+        $response->getBody()->write("name: {$data['name']}, email: {$data['email']}");
 
     } catch (Exception $e) {
         $response->getBody()->write($e->getMessage());
